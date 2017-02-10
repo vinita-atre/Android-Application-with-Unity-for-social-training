@@ -3,12 +3,20 @@
 
     <!-- Strings related to login -->
     <string name="prompt_email">Username</string>
-    <string name="prompt_password">Password (minimum 4 characters)</string>
+    <string name="prompt_password">Password (minimum 5 characters)</string>
+    <string name="prompt_confirm_password"> Confirm Password </string>
+    <string name="prompt_Age">Age</string>
+    <string name="radio_male">Male</string>
+    <string name="radio_female">Female</string>
+    <string name="welcome"> Welcome to STAAR</string>
     <string name="prompt_register">New User?</string>
     <string name="action_sign_in">Sign in</string>
     <string name="action_register">Register</string>
     <string name="action_sign_in_short">Sign in</string>
+    error_mismatch_password
+    <string name="error_mismatch_password">Password do not match</string>
     <string name="error_invalid_email">This Username is invalid</string>
+
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">This field is required</string>

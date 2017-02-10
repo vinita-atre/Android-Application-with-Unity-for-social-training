@@ -23,12 +23,25 @@
         android:id="@+id/login_form"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
         <LinearLayout
             android:id="@+id/email_login_form"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/welcome"
+                android:id="@+id/textViewIntro"
+                android:textStyle="bold"
+                android:textSize="@dimen/abc_text_size_large_material" />
+            <ImageView
+                android:id="@+id/imageViewLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher"
+                android:layout_gravity="center_horizontal"/>
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
@@ -62,6 +75,55 @@
                     android:singleLine="true" />
 
             </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:ems="10"
+                    android:id="@+id/confirmPassword"
+                    android:hint="@string/prompt_confirm_password" />
+
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/editTextAge"
+                    android:hint="@string/prompt_Age" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+
+
+
+            <RadioGroup
+                android:id="@+id/radioSex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radio_male"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/radioFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radio_female" />
+
+            </RadioGroup>
 
             <Button
                 android:id="@+id/email_sign_in_button"
@@ -69,34 +131,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="@string/action_sign_in"
+                android:text="@string/action_register"
                 android:textStyle="bold" />
 
         </LinearLayout>
     </ScrollView>
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="16dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/prompt_register"
-            android:id="@+id/textView" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/action_register"
-            android:id="@+id/register_action_button"
-            style="?android:textAppearanceSmall"
-            android:textStyle="bold"
-            android:layout_marginLeft="16dp"
-            android:background="@android:color/darker_gray" />
-    </LinearLayout>
 
 </LinearLayout>

@@ -28,6 +28,8 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -44,6 +46,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
      * Id to identity READ_CONTACTS permission request.
      */
     private static final int REQUEST_READ_CONTACTS = 0;
+    private RadioGroup radioSexGroup;
+    private RadioButton radioSexButton;
 
     /**
      * A dummy authentication store containing known user names and passwords.
@@ -60,6 +64,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     // UI references.
     private EditText mUsernameView;
     private EditText mPasswordView;
+    private EditText mPasswordConfirmView;
+    private EditText mAgeView;
     private View mProgressView;
     private View mLoginFormView;
 
@@ -70,8 +76,10 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         // Set up the login form.
         mUsernameView = (EditText) findViewById(R.id.email);
 
-
+        mAgeView = (EditText) findViewById(R.id.editTextAge);
         mPasswordView = (EditText) findViewById(R.id.password);
+        mPasswordConfirmView = (EditText) findViewById(R.id.confirmPassword);
+        radioSexGroup = (RadioGroup) findViewById(R.id.radioSex);
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
@@ -118,7 +126,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         // Store values at the time of the login attempt.
         String username = mUsernameView.getText().toString();
         String password = mPasswordView.getText().toString();
-
+        String confirmPassword = mPasswordConfirmView.getText().toString();
+        String age = mAgeView.getText().toString();
         boolean cancel = false;
         View focusView = null;
 
@@ -128,11 +137,26 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             focusView = mPasswordView;
             cancel = true;
         }
+        if(!isPasswordMatch(password,confirmPassword)){
+            mPasswordView.setError(getString(R.string.error_mismatch_password));
+            focusView = mPasswordView;
+            cancel = true;
+        }
 
         // Check for a valid email address.
         if (TextUtils.isEmpty(username)) {
             mUsernameView.setError(getString(R.string.error_field_required));
             focusView = mUsernameView;
+            cancel = true;
+        }
+        if (TextUtils.isEmpty(confirmPassword)) {
+            mPasswordConfirmView.setError(getString(R.string.error_field_required));
+            focusView = mPasswordConfirmView;
+            cancel = true;
+        }
+        if (TextUtils.isEmpty(age)) {
+            mAgeView.setError(getString(R.string.error_field_required));
+            focusView = mAgeView;
             cancel = true;
         }
 
@@ -155,7 +179,10 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         //TODO: Replace this with your own logic
         return password.length() > 4;
     }
-
+    private boolean isPasswordMatch(String password, String confirmPassword) {
+        //TODO: Replace this with your own logic
+        return password.equals(confirmPassword);
+    }
     /**
      * Shows the progress UI and hides the login form.
      */
