@@ -131,22 +131,25 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         boolean cancel = false;
         View focusView = null;
 
-        // Check for a valid password, if the user entered one.
-        if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
-            mPasswordView.setError(getString(R.string.error_invalid_password));
-            focusView = mPasswordView;
-            cancel = true;
-        }
-        if(!isPasswordMatch(password,confirmPassword)){
-            mPasswordView.setError(getString(R.string.error_mismatch_password));
-            focusView = mPasswordView;
-            cancel = true;
-        }
 
         // Check for a valid email address.
         if (TextUtils.isEmpty(username)) {
             mUsernameView.setError(getString(R.string.error_field_required));
             focusView = mUsernameView;
+            cancel = true;
+        }
+        // Check for a valid password, if the user entered one.
+        if (TextUtils.isEmpty(password)){
+            mPasswordView.setError(getString(R.string.error_field_required));
+            focusView = mPasswordView;
+            cancel = true;
+        }else if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
+            mPasswordView.setError(getString(R.string.error_invalid_password));
+            focusView = mPasswordView;
+            cancel = true;
+        }else if(!isPasswordMatch(password,confirmPassword)){
+            mPasswordView.setError(getString(R.string.error_mismatch_password));
+            focusView = mPasswordView;
             cancel = true;
         }
         if (TextUtils.isEmpty(confirmPassword)) {
@@ -159,6 +162,13 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             focusView = mAgeView;
             cancel = true;
         }
+
+
+
+
+
+
+
 
         if (cancel) {
             // There was an error; don't attempt login and focus the first
@@ -317,7 +327,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             showProgress(false);
 
             if (success) {
-                finish();
+              //  finish();
             } else {
                 mPasswordView.setError(getString(R.string.error_incorrect_password));
                 mPasswordView.requestFocus();
