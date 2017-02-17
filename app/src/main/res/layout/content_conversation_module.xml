@@ -7,11 +7,88 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.umd.vinita.staar.ConversationModuleActivity"
     tools:showIn="@layout/activity_conversation_module">
-
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view_intro"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_margin"
-        android:text="@string/large_text" />
+        card_view:cardCornerRadius="4dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Basics of Conversation"
+                android:textAlignment="center"
+                android:textColor="@color/cardview_light_background"
+                android:background="@color/colorPrimary"
+                android:id="@+id/textView_progress_title"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:padding="6dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:textAppearance="?android:attr/textAppearanceListItem"
+                android:text="Level - 1 "
+                android:id="@+id/textView_modules_completed" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:textAppearance="?android:attr/textAppearanceListItem"
+                android:text="Status - not started "
+                android:id="@+id/textView_module_current" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceListItem"
+                android:text=" Time to complete - 15 mins"
+                android:layout_margin="6dp"
+                android:id="@+id/textView_last_visit" />
+
+            <VideoView
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:layout_margin="6dp"
+                android:id="@+id/videoView" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view_step1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_margin"
+        card_view:cardCornerRadius="4dp">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceListItem"
+            android:text=" Time to complete - 15 mins"
+            android:layout_margin="6dp"
+            android:id="@+id/textView_step1_intro" />
+
+    </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+    </LinearLayout>
 
 </android.support.v4.widget.NestedScrollView>

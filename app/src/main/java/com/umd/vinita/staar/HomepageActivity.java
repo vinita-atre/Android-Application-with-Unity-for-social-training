@@ -84,6 +84,9 @@ public class HomepageActivity extends AppCompatActivity
         } else if (id == R.id.nav_progress) {
 
         } else if (id == R.id.nav_module1) {
+            intent = new Intent(this, ConversationModuleActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            this .startActivity(intent);
 
         } else if (id == R.id.nav_manage) {
 
