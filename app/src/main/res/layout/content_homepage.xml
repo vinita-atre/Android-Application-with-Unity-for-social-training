@@ -24,8 +24,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Welcome Vinita"
+            android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/textView2" />
         <!-- A CardView that contains a TextView -->
+
         <android.support.v7.widget.CardView
             xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view_progress"
@@ -46,30 +48,38 @@
                     android:textColor="@color/cardview_light_background"
                     android:background="@color/colorPrimary"
                     android:id="@+id/textView_progress_title"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
                     android:padding="6dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:textAppearance="?android:attr/textAppearanceListItem"
                     android:text="Modules Completed - 0"
                     android:id="@+id/textView_modules_completed" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:textAppearance="?android:attr/textAppearanceListItem"
                     android:text="Current module - Conversation Module"
                     android:id="@+id/textView_module_current" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceListItem"
                     android:text="Last Visit - 2/15/2017 "
+                    android:layout_margin="6dp"
                     android:id="@+id/textView_last_visit" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="View Progress"
+
                     android:id="@+id/button_view_progress"
                     android:layout_gravity="center_horizontal"/>
             </LinearLayout>
@@ -94,12 +104,15 @@
                     android:text="Get Learning"
                     android:textAlignment="center"
                     android:textColor="@color/cardview_light_background"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
                     android:background="@color/colorPrimary"
                     android:id="@+id/textView_modules_title"
+
                     android:padding="6dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
                     android:text="The conversational module is a level one exercise to get basic skills in starting, maintaing and exiting a conversation"
                     android:id="@+id/textView_module_description" />
 
