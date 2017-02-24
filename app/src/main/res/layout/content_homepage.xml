@@ -124,7 +124,8 @@
                     android:layout_height="wrap_content"
                     android:text="Module One"
                     android:id="@+id/button_goto_module"
-                    android:layout_gravity="center_horizontal"/>
+                    android:layout_gravity="center_horizontal"
+                    android:onClick="moduleOneButtonClick"/>
             </LinearLayout>
 
         </android.support.v7.widget.CardView>

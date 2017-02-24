@@ -67,7 +67,12 @@ public class HomepageActivity extends AppCompatActivity
 
         return super.onOptionsItemSelected(item);
     }
-
+    public void moduleOneButtonClick(View view){
+        Intent intent;
+        intent = new Intent(this, ConversationModuleActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        this .startActivity(intent);
+    }
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
