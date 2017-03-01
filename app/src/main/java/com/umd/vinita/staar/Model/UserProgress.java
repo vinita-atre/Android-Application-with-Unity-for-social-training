@@ -7,6 +7,15 @@ public class UserProgress {
     String modulesCompleted;
     String curentModule;
     int currentModuleID;
+    String userID;
+
+    public String getUserID() {
+        return userID;
+    }
+
+    public void setUserID(String userID) {
+        this.userID = userID;
+    }
 
     public void setModulesCompleted(String modulesCompleted) {
         this.modulesCompleted = modulesCompleted;
