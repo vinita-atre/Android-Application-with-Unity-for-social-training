@@ -1,13 +1,14 @@
 package com.umd.vinita.staar;
 
-import android.app.ActionBar;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.view.View;
+
+import com.umd.vinita.staar.Service.ProductService;
+
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ConversationModuleActivity extends AppCompatActivity {
 
