@@ -36,6 +36,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -74,8 +75,9 @@ public class ModuleVoice extends AppCompatActivity implements SpeechDelegate {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_module_voice);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-       setSupportActionBar(toolbar);
+
+
+
         linearLayout = (LinearLayout) findViewById(R.id.linearLayout);
 
         button = (ImageButton) findViewById(R.id.button);
@@ -149,7 +151,15 @@ public class ModuleVoice extends AppCompatActivity implements SpeechDelegate {
             Log.e("speech", "Google voice typing must be enabled!");
         }
     }
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                return true;
+        }
 
+        return super.onOptionsItemSelected(item);
+    }
     @Override
     protected void onDestroy() {
         super.onDestroy();
