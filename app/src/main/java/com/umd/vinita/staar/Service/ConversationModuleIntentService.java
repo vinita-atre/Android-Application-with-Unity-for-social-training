@@ -3,6 +3,8 @@ package com.umd.vinita.staar.Service;
 import android.app.IntentService;
 import android.content.Intent;
 import android.content.Context;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 
 /**
  * An {@link IntentService} subclass for handling asynchronous task requests in
@@ -11,6 +13,7 @@ import android.content.Context;
  * TODO: Customize class - update intent actions, extra parameters and static
  * helper methods.
  */
+@RequiresApi(api = Build.VERSION_CODES.CUPCAKE)
 public class ConversationModuleIntentService extends IntentService {
     // TODO: Rename actions, choose action names that describe tasks that this
     // IntentService can perform, e.g. ACTION_FETCH_NEW_ITEMS

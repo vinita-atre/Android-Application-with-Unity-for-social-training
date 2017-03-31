@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.STAAR.artrial5.UnityPlayerActivity;
 import com.umd.vinita.staar.Service.ProductService;
 
 import retrofit2.Retrofit;
@@ -35,7 +36,8 @@ public class ConversationModuleActivity extends AppCompatActivity {
 
     }
     private void startModule(){
-        Intent intent = new Intent(this, ModuleVoice.class);
+
+        Intent intent = new Intent(this, UnityPlayerActivity.class);
         startActivity(intent);
     }
 
