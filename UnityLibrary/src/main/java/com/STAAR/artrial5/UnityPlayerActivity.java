@@ -1,8 +1,9 @@
 package com.STAAR.artrial5;
-
+//import com.umd.vinita.staar.*;
 import com.unity3d.player.*;
 import android.app.Activity;
 import android.content.ContextWrapper;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.PixelFormat;
 import android.os.Bundle;

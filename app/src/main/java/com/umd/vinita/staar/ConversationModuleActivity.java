@@ -42,6 +42,7 @@ public class ConversationModuleActivity extends AppCompatActivity {
     private void startModule(){
 
         Intent intent = new Intent(this, UnityPlayerActivity.class);
+        Intent serviceIntent = new Intent(this, com.umd.vinita.staar.Service.ConversationModuleIntentService.class);
         startActivity(intent);
     }
 
