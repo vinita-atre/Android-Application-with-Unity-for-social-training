@@ -7,6 +7,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.STAAR.artrial5.UnityPlayerActivity;
 import com.umd.vinita.staar.Service.ProductService;
@@ -16,6 +17,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ConversationModuleActivity extends AppCompatActivity {
     private Button startModule;
+    private ImageView  moduleThumbnail;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +26,8 @@ public class ConversationModuleActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        moduleThumbnail = (ImageView) findViewById(R.id.ConversationModuleImageView);
+        moduleThumbnail.setImageResource(R.drawable.ic_menu_conversation_module );
         startModule = (Button) findViewById(R.id.button_start);
         startModule.setOnClickListener(new View.OnClickListener(){
             @Override

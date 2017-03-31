@@ -2,12 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.STAAR.artrial5"
     android:installLocation="preferExternal"
-    android:theme="@android:style/Theme.NoTitleBar"
+
     android:versionCode="1"
     android:versionName="1.0">
 
     <uses-sdk
-        android:minSdkVersion="14"
+        android:minSdkVersion="21"
         android:targetSdkVersion="22" />
     <uses-feature android:name="android.hardware.camera" />
     <supports-screens
@@ -22,8 +22,9 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-    <application android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
-        <activity android:name="com.STAAR.artrial5.UnityPlayerActivity"/>
+    <application>
+        <activity android:name="com.STAAR.artrial5.UnityPlayerActivity"
+            android:theme="@android:style/ThemeOverlay.Material"/>
         <activity
             android:name="com.STAAR.artrial5.UnityPlayerNativeActivity"
             android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"

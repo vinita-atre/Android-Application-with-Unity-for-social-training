@@ -66,12 +66,12 @@
                 android:layout_margin="6dp"
                 android:id="@+id/textView_last_visit" />
 
-            <VideoView
+            <ImageView
                 android:layout_width="300dp"
                 android:layout_height="300dp"
                 android:layout_gravity="center"
                 android:layout_margin="6dp"
-                android:id="@+id/videoView" />
+                android:id="@+id/ConversationModuleImageView" />
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

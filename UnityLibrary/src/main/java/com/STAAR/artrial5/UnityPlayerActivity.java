@@ -2,14 +2,17 @@ package com.STAAR.artrial5;
 
 import com.unity3d.player.*;
 import android.app.Activity;
+import android.content.ContextWrapper;
 import android.content.res.Configuration;
 import android.graphics.PixelFormat;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Toolbar;
 
 public class UnityPlayerActivity extends Activity
 {
@@ -25,12 +28,14 @@ public class UnityPlayerActivity extends Activity
 
 		mUnityPlayer = new UnityPlayer(this);
 		setContentView(mUnityPlayer);
+
 		mUnityPlayer.requestFocus();
 	}
 
 	// Quit Unity
 	@Override protected void onDestroy ()
 	{
+		Log.d("unity player activity", "onDestroy: check");
 		mUnityPlayer.quit();
 		super.onDestroy();
 	}
@@ -52,6 +57,7 @@ public class UnityPlayerActivity extends Activity
 	// This ensures the layout will be correct.
 	@Override public void onConfigurationChanged(Configuration newConfig)
 	{
+		Log.d("unity player activity", "onConfigurationChanged: check");
 		super.onConfigurationChanged(newConfig);
 		mUnityPlayer.configurationChanged(newConfig);
 	}
@@ -59,6 +65,7 @@ public class UnityPlayerActivity extends Activity
 	// Notify Unity of the focus change.
 	@Override public void onWindowFocusChanged(boolean hasFocus)
 	{
+		Log.d("unity player activity", "onWindowFocusChanged: check");
 		super.onWindowFocusChanged(hasFocus);
 		mUnityPlayer.windowFocusChanged(hasFocus);
 	}

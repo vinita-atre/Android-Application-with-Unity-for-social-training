@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.Context;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
+import android.util.Log;
 
 /**
  * An {@link IntentService} subclass for handling asynchronous task requests in
@@ -19,6 +20,7 @@ public class ConversationModuleIntentService extends IntentService {
     // IntentService can perform, e.g. ACTION_FETCH_NEW_ITEMS
     private static final String ACTION_FOO = "com.umd.vinita.staar.Service.action.FOO";
     private static final String ACTION_BAZ = "com.umd.vinita.staar.Service.action.BAZ";
+    private static final String TAG = "CM Intent Service";
 
     // TODO: Rename parameters
     private static final String EXTRA_PARAM1 = "com.umd.vinita.staar.Service.extra.PARAM1";
@@ -80,6 +82,7 @@ public class ConversationModuleIntentService extends IntentService {
      */
     private void handleActionFoo(String param1, String param2) {
         // TODO: Handle action Foo
+        Log.d(TAG, "handleActionFoo");
         throw new UnsupportedOperationException("Not yet implemented");
     }
 
