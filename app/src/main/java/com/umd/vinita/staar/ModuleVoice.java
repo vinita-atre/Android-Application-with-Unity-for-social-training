@@ -1,33 +1,6 @@
 package com.umd.vinita.staar;
 
-//import android.os.Bundle;
-//import android.support.design.widget.FloatingActionButton;
-//import android.support.design.widget.Snackbar;
-//import android.support.v7.app.AppCompatActivity;
-//import android.support.v7.widget.Toolbar;
-//import android.view.View;
-//
-//public class ModuleVoice extends AppCompatActivity {
-//
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_module_voice);
-//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
-//
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
-//    }
-//
-//}
-//
+
 import android.Manifest;
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -69,7 +42,25 @@ public class ModuleVoice extends AppCompatActivity implements SpeechDelegate {
     private EditText textToSpeech;
     private SpeechProgressView progress;
     private LinearLayout linearLayout;
-    
+    private final  static  String[] InputArrayQuestionsForStep1 = {};
+    private final  static  String[] InputArrayAnswersForStep1 = {"hello, I am good","I’m good How are you","Hello How is it going",
+            "Hey what’s going on"};
+    private final static String[] InputArrayWrongAnswersForStep1 = {"What are you doing here","Who are you","What do you want",
+            "Umm","what","You talk first","I don’t want to say anything","I don’t care","I don’t know you","Why are you here"};
+    private final static String[] CorrectiveResponseForStep1 = {"A better response for a greeting could be," +
+            " Hello, how are you? to let me know you want to start up a conversation"};
+
+    private final  static  String[] InputArrayQuestionsForStep2 = {};
+    private final  static  String[] InputArrayQuestionsForStep3 = {};
+
+    private final  static  String[] InputPromptForNoResponse = {"Hey, do you need something? Can I help you?",
+            "You need to say something to me to initiate the conversation",
+            " You need to comment on what I said", " Do you remember what you just leaned in the example earlier?",
+            " First, you need to say something to start this conversation with me, for example, you can say: hi, how are you?"};
+    private final static String[] WrongResponse = {"try again"};
+
+    private final static String[] UninterpretedResponse = {"Sorry, come again?” “I didn’t catch that, one more time."};
+    private final static String[] LostTargetARRespponse = {"Wait a minute, I’m over here!"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

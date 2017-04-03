@@ -52,6 +52,7 @@
         android:isGame="true"
         android:label="@string/app_name"
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        <activity android:name="com.STAAR.artrial5.UnityPlayerActivity" />
         <activity
             android:name="com.STAAR.artrial5.UnityPlayerNativeActivity"
             android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
