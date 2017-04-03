@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="libs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/unity-classes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/Vuforia.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/VuforiaUnityPlayer.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
