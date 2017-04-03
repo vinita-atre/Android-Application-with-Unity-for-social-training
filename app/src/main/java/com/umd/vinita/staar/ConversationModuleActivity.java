@@ -47,16 +47,16 @@ public class ConversationModuleActivity extends AppCompatActivity {
 
         startActivity(intent);
 
-        Intent otherIntent = new Intent(this, ModuleVoice.class);
-
-        startActivity(otherIntent);
-
-
-
-        Intent serviceIntent = new Intent(this, com.umd.vinita.staar.Service.ConversationModuleIntentService.class);
-        serviceIntent.setAction("startTalking");
-        serviceIntent.putExtra("hi",true);
-        startService(serviceIntent);
+//        Intent otherIntent = new Intent(this, ModuleVoice.class);
+//
+//        startActivity(otherIntent);
+//
+//
+//
+//        Intent serviceIntent = new Intent(this, com.umd.vinita.staar.Service.ConversationModuleIntentService.class);
+//        serviceIntent.setAction("startTalking");
+//        serviceIntent.putExtra("hi",true);
+//        startService(serviceIntent);
 
     }
 
