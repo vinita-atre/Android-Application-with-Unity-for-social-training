@@ -39,4 +39,7 @@
     <string name="enable_google_voice_typing">Please enable Google Voice Typing to use speech recognition!</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+    <string name="intro_video_caption">Initiate a conversation - how?</string>
+    <string name="maintain_video_caption">Maintain a conversation - how?</string>
+    <string name="end_video_caption">End a conversation - how?</string>
 </resources>
