@@ -1,1 +1,1 @@
-include ':app', 'UnityARModule'
+include ':app', 'UnityARModule', ':UnityARModulev2'

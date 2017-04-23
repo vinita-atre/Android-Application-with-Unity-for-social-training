@@ -54,6 +54,6 @@ dependencies {
     compile 'io.reactivex:rxjava:1.1.6'
     compile 'com.devbrackets.android:exomedia:3.1.1'
     testCompile 'junit:junit:4.12'
-    compile project(':UnityARModule')
+    compile project(':UnityARModulev2')
 }
 
